@@ -193,3 +193,13 @@ const upperCaseFruits = fruits.map(function fruitLoop(fruit) {
 })
 
 console.log(upperCaseFruits)
+
+// filter
+
+const newFruits = ["Mango", "Orange", "Apple", "Banana"]
+
+const filteredFruits = newFruits.filter(function filterLoop(fruit) {
+    return fruit.length > 5
+})
+
+console.log(filteredFruits)
