@@ -169,7 +169,7 @@ for (let fruit of fruits) {
     console.log(fruit)
 }
 
-// for...in loop
+// for...in loop // arrays
 const person = {
     name: "John",
     city: "Sydney",
@@ -182,10 +182,18 @@ for (let key in person) {
     console.log("\n")
 }
 
-// forEach // only loops and then finishes
+// forEach // only loops and then finishes // objects
 fruits.forEach(function fruitLoop(fruit, index) {
     console.log(fruit, index)
+
 })
+
+// using arrow function
+console.log("forEach using arrow function")
+fruits.forEach((fruits, index) => {
+    console.log(fruits, index)
+}
+)
 
 // map // loops and then returns a new array // always a list
 const upperCaseFruits = fruits.map(function fruitLoop(fruit) {
@@ -194,7 +202,16 @@ const upperCaseFruits = fruits.map(function fruitLoop(fruit) {
 
 console.log(upperCaseFruits)
 
-// filter
+// using arrow function
+
+const upperCaseFruitsUsingArrow = fruits.map((fruit) => {
+    return fruit.toUpperCase()
+})
+
+console.log("map using arrow function")
+console.log(upperCaseFruitsUsingArrow)
+
+// filter out data based on certain conditions
 
 const newFruits = ["Mango", "Orange", "Apple", "Banana"]
 
@@ -203,3 +220,47 @@ const filteredFruits = newFruits.filter(function filterLoop(fruit) {
 })
 
 console.log(filteredFruits)
+
+// Functions
+
+// parameter:
+function greet(name) {
+    console.log("Hello " + name)
+}
+
+// argument:
+greet("Jane")
+
+// name - parameter
+// "Jane" - argument
+
+// return statement
+function sum (num1, num2) {
+    return num1 + num2
+}
+
+const totalSum = sum(5, 7)
+console.log(totalSum)
+
+// First class functions - first class citizens
+// can be assigned to a variable
+// can be passed as an argument to another function
+// can be returned from another function
+
+
+// anonymous functions - doesnt have a name of its own
+// const addFn = function (a, b) {
+   //  return a + b
+// }
+
+// const total = addFn(1 ,2)
+// console.log(total)
+
+// arrow function
+const addFn =  (a, b) => {
+    return a + b
+}
+
+const total = addFn(1 ,2)
+console.log(total)
+
