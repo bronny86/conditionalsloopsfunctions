@@ -158,3 +158,38 @@ do {
     k++
 
 } while (k < 5)
+
+// for...of => arrays
+// for...in => objects
+
+// for..of loop
+const fruits = ["Mango", "Orange", "Apple"]
+
+for (let fruit of fruits) {
+    console.log(fruit)
+}
+
+// for...in loop
+const person = {
+    name: "John",
+    city: "Sydney",
+    age: 27
+}
+
+for (let key in person) {
+    console.log(key)
+    console.log(person[key])
+    console.log("\n")
+}
+
+// forEach // only loops and then finishes
+fruits.forEach(function fruitLoop(fruit, index) {
+    console.log(fruit, index)
+})
+
+// map // loops and then returns a new array // always a list
+const upperCaseFruits = fruits.map(function fruitLoop(fruit) {
+    return fruit.toUpperCase()
+})
+
+console.log(upperCaseFruits)
